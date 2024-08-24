@@ -1,9 +1,6 @@
-import dotenv from "dotenv";
-import connectDB from "./db/config.js";
-import { app } from "./app.js";
-dotenv.config({
-  path: "./.env",
-});
+require("dotenv").config();
+const connectDB = require("./db/config.js");
+const { app } = require("./app.js");
 
 connectDB()
   .then(() => {
